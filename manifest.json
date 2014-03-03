@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Unidecode",
+  "description": "Display encoded strings",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources": ["popup.html"],
+  "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["popup.js"],
+        "css": ["popup.css"]
+
+      }
+    ]
+}
